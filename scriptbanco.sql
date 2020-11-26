@@ -4,14 +4,14 @@ use ApiNode;
 create table tb_produto
 (
 id_produto int primary key not null auto_increment,
-nome varchar(100),
-preco float
+nome varchar(100) not null,
+preco float not null
 );
 create table tb_pedido
 (
-id_pedido int primary key not null,
-id_produto int,
-quantidade int,
+id_pedido int primary key not null auto_increment,
+id_produto int not null,
+quantidade int not null,
  constraint FOREIGN KEY (id_produto) REFERENCES tb_produto(id_produto)
 );
 
