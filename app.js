@@ -7,11 +7,14 @@ const bodyParser = require("body-parser");
 //importando metodos de rotas de produtos
 const rotasProdutos = require("./routes/produtos")
 const rotasPedidos = require("./routes/pedidos")
+const rotasUsuarios = require("./routes/usuarios")
+
+//aqui estamos tonando a imagem acessivel pela API na pasta ipload criada pelo proprio.
+app.use('/uploads', express.static('uploads'));
 //vamos aceitar somente dados simples
 app.use(bodyParser.urlencoded({extended :false}));
 //vamos aceita somente dados em json
 app.use(bodyParser.json());
-
 //configuração de acesso de tipo de dados esta é uma configuração de segurança de CORS.
 app.use((req, res,next)=>{
     res.header('Acess-Control-Allow-Origin','*');
@@ -28,6 +31,8 @@ app.use((req, res,next)=>{
 app.use('/produtos',rotasProdutos);
 // aqui estamos indicando qual arquivo chamar em caso da rota ser pedidos
 app.use('/pedidos',rotasPedidos);
+// aqui estamos indicando qual arquivo chamar em caso da rota ser usuarios
+app.use('/usuaios',rotasUsuarios);
 
 //testando rota
 app.use('/teste',(req, res, next)=>{

@@ -26,3 +26,9 @@ SELECT pedido.id_pedido,
 FROM tb_pedido as pedido 
 INNER JOIN tb_produto as produto
       ON pedido.id_produto = produto.id_produto;
+
+create table tb_usuario(
+      id_usuario INTERGER not null primary key auto_increment,
+      email varchar(100),
+      senha varchar(100)
+       );
