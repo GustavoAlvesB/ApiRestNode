@@ -29,6 +29,6 @@ INNER JOIN tb_produto as produto
 
 create table tb_usuario(
       id_usuario INTERGER not null primary key auto_increment,
-      email varchar(100),
+      email varchar(100) UNIQUE,
       senha varchar(100)
        );
