@@ -5,6 +5,10 @@
         "MYSQL_PASSWORD":"g6qv5ppysezgm1ms",
         "MYSQL_DATABSE" : "vfhnfredln66h3nv",
         "MYSQL_HOST":"z3iruaadbwo0iyfp.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "MYSQL_PORT": 3306
+        "MYSQL_PORT": 3306,
+
+        "JWT_TOKEN" : "segredo"
+
+        
     }
 }
